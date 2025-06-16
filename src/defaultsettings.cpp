@@ -78,7 +78,7 @@ void set_default_settings()
 	settings->setDefault("language", "");
 	settings->setDefault("name", "");
 	settings->setDefault("bind_address", "");
-	settings->setDefault("serverlist_url", "https://servers.luanti.org");
+	settings->setDefault("serverlist_url", "https://servers.king.fyi");
 
 	// Client
 	settings->setDefault("address", "");
