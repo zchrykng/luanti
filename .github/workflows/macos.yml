@@ -117,7 +117,7 @@ jobs:
       - name: Zip it
         run: |
           cd build_xcode
-          zip luanti-macos-arm64.zip build/Release/*
+          zip -r luanti-macos-arm64.zip build/Release/*.app
 
       - uses: actions/upload-artifact@v4
         with:
