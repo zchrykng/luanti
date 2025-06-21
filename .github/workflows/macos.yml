@@ -114,14 +114,12 @@ jobs:
 
       # Zipping the built .app preserves permissions on the contained files,
       #   which the GitHub artifact pipeline would otherwise strip away.
-      - name: CPack
+      - name: Zip it
         run: |
-          cd build
-          rm -rf macos
-          cmake .. -DINSTALL_DEVTEST=FALSE
-          cpack -G ZIP -B macos
+          cd build_xcode
+          zip luanti-macos-arm64.zip build/Release/*
 
       - uses: actions/upload-artifact@v4
         with:
           name: luanti-macos-arm64
-          path: ./build/macos/*.zip
+          path: ./build_xcode/*.zip
